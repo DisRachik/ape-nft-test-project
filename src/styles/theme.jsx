@@ -1,4 +1,4 @@
-const theme = Object.freeze({
+export const theme = Object.freeze({
 	colors: {
 		lightText: "#FFFFFF",
 		darkText: "#1E1E1E",
@@ -6,6 +6,8 @@ const theme = Object.freeze({
 		accent: "#DC3B5A",
 
 		bgMain: "#181818",
+		bgAccent: "#DC3B5A",
+		bgLinkButton: "rgba(30, 30, 30, 0.10)",
 
 		discord: "#5A65F2",
 	},
@@ -13,7 +15,17 @@ const theme = Object.freeze({
 	fontSizes: {
 		small: "12px",
 		medium: "16px",
-		largeMb: "44px",
+		large: "20px",
+		big: "24px",
+		giant: "28px",
+
+		titleSectionMb: "44px",
+		titleSectionTb: "80px",
+		titleSectionDt: "160px",
+
+		titlePageMb: "44px",
+		titlePageTb: "92px",
+		titlePageDt: "164px",
 	},
 
 	fonts: {
@@ -25,11 +37,13 @@ const theme = Object.freeze({
 	spacing: value => `${4 * value}px`,
 
 	breakpoints: {
-		mobile: "360px",
-		mobileMax: "480px",
-		tablet: "768px",
-		desktop: "1280px",
-		desktopMax: "1440px",
+		mb: "480px",
+		tb: "768px",
+		dt: "1280px",
+		mw: "1440px",
+	},
+	mediaMin(value) {
+		return `@media (min-width: ${this.breakpoints[value]})`;
 	},
 
 	shadows: {
@@ -45,5 +59,3 @@ const theme = Object.freeze({
 		return animationValue.join(", ");
 	},
 });
-
-export default theme;

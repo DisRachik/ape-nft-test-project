@@ -1,8 +1,8 @@
 import { css } from "@emotion/react";
 import "modern-normalize";
-import theme from "./theme";
+import { theme } from "./theme";
 
-const GlobalStyles = css`
+export const GlobalStyles = css`
 	#root {
 		width: 100%;
 	}
@@ -15,7 +15,7 @@ const GlobalStyles = css`
 		margin: 0;
 		font-family: ${theme.fonts.messina}, sans-serif;
 		font-weight: 400;
-		font-size: 12px;
+		font-size: ${theme.spacing(3)};
 		line-height: 1.16667;
 
 		color: ${theme.colors.lightText};
@@ -65,5 +65,3 @@ const GlobalStyles = css`
 		cursor: pointer;
 	}
 `;
-
-export default GlobalStyles;

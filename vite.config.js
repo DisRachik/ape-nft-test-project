@@ -36,7 +36,9 @@ export default defineConfig({
 	resolve: {
 		alias: {
 			src: "/src",
+			styles: "/src/styles",
 			components: "/src/components",
+			layout: "/src/layout",
 		},
 	},
 });
