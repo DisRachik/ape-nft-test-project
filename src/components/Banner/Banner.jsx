@@ -18,6 +18,7 @@ export const Banner = () => {
 				x: -textRef.current.clientWidth,
 				duration: 15,
 				repeat: -1,
+				yoyo: true,
 				ease: "none",
 			},
 		);
@@ -25,11 +26,11 @@ export const Banner = () => {
 	return (
 		<s.Wrap>
 			<s.BannerList ref={itemRef}>
-				<s.BannerItem ref={textRef}>
+				<s.BannerItem>
 					<s.TextAD>Destroy stereotypes</s.TextAD>
 					<CrossIcon />
 				</s.BannerItem>
-				<s.BannerItem>
+				<s.BannerItem ref={textRef}>
 					<s.TextAD>HAVE NO LIMITS</s.TextAD>
 					<CrossIcon />
 				</s.BannerItem>
@@ -39,6 +40,10 @@ export const Banner = () => {
 				</s.BannerItem>
 				<s.BannerItem>
 					<s.TextAD>Destroy stereotypes</s.TextAD>
+					<CrossIcon />
+				</s.BannerItem>
+				<s.BannerItem>
+					<s.TextAD>HAVE NO LIMITS</s.TextAD>
 					<CrossIcon />
 				</s.BannerItem>
 			</s.BannerList>

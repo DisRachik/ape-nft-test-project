@@ -1,6 +1,36 @@
 import styled from "@emotion/styled";
 import { theme } from "styles";
 
+const getIconStyle = ({ icon }) => {
+	if (icon) {
+		return {
+			width: 24,
+			height: 24,
+			fill: "currentColor",
+		};
+	}
+};
+const getParentStyle = ({ icon }) => {
+	if (icon) {
+		return {
+			display: "grid",
+			placeItems: "center",
+
+			padding: `${theme.spacing(2.5)}`,
+			width: `${theme.spacing(12)}`,
+			height: `${theme.spacing(12)}`,
+		};
+	}
+};
+const getParentStyleForDesctop = ({ icon }) => {
+	if (icon) {
+		return {
+			width: `${theme.spacing(20)}`,
+			height: `${theme.spacing(20)}`,
+		};
+	}
+};
+
 export const Link = styled.a`
 	padding: ${theme.spacing(2.5)} 0 ${theme.spacing(3)};
 
@@ -26,5 +56,13 @@ export const Link = styled.a`
 
 		font-size: ${theme.fontSizes.giant};
 		line-height: 1.214;
+
+		${getParentStyleForDesctop}
+	}
+
+	${getParentStyle}
+
+	& > svg {
+		${getIconStyle}
 	}
 `;

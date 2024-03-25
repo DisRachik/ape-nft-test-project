@@ -2,9 +2,6 @@ import styled from "@emotion/styled";
 import { theme } from "styles";
 
 export const ContainerWrap = styled.div`
-	/* Must delete */
-	outline: 1px solid tomato;
-
 	position: relative;
 
 	max-width: ${theme.breakpoints.sm};

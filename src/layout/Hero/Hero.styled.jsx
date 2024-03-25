@@ -5,7 +5,6 @@ import { heroImg } from "src/data/images.js";
 const { img, img2x, webp, webp2x } = heroImg[0];
 
 export const Wrap = styled.div`
-	position: relative;
 	width: 100%;
 
 	color: ${theme.colors.darkText};
@@ -17,7 +16,6 @@ export const Wrap = styled.div`
 
 export const Container = styled.div`
 	position: relative;
-	z-index: 2;
 
 	max-width: ${theme.spacing(86)};
 	margin: 0 auto;
@@ -58,14 +56,10 @@ export const Container = styled.div`
 			url(${img2x.desktop}) 2x,
 			url(${img.desktop}) 1x
 		);
-		/* background-position: center bottom; */
 	}
 `;
 
 export const Title = styled.h1`
-	position: relative;
-	z-index: 1;
-
 	margin-bottom: ${theme.spacing(2)};
 
 	font-family: ${theme.fonts.grotesk};

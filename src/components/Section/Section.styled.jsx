@@ -2,9 +2,6 @@ import styled from "@emotion/styled";
 import { theme } from "styles";
 
 export const SectionWrap = styled.section`
-	/* Must delete */
-	outline: 1px solid greenyellow;
-
 	width: 100%;
 	padding-bottom: ${theme.spacing(15)};
 
