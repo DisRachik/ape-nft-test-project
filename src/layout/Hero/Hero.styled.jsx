@@ -1,20 +1,11 @@
 import styled from "@emotion/styled";
 import { theme } from "styles";
 
-import imgSmallPng from "src/images/hero/monkey-hero-mb.png";
-import imgSmallPng2 from "src/images/hero/monkey-hero-mb@2x.png";
-import imgSmall from "src/images/webp/monkey-hero-mb.webp";
-import imgSmall2 from "src/images/webp/monkey-hero-mb@2x.webp";
-import imgMediumPng from "src/images/hero/monkey-hero-tb.png";
-import imgMediumPng2 from "src/images/hero/monkey-hero-tb@2x.png";
-import imgMedium from "src/images/webp/monkey-hero-tb.webp";
-import imgMedium2 from "src/images/webp/monkey-hero-tb@2x.webp";
-import imgBigPng from "src/images/hero/monkey-hero-dt.png";
-import imgBigPng2 from "src/images/hero/monkey-hero-dt@2x.png";
-import imgBig from "src/images/webp/monkey-hero-dt.webp";
-import imgBig2 from "src/images/webp/monkey-hero-dt@2x.webp";
+import { heroImg } from "src/data/images.js";
+const { img, img2x, webp, webp2x } = heroImg[0];
 
 export const Wrap = styled.div`
+	position: relative;
 	width: 100%;
 
 	color: ${theme.colors.darkText};
@@ -32,12 +23,12 @@ export const Container = styled.div`
 	margin: 0 auto;
 	padding: ${theme.spacing(9)} ${theme.spacing(16)} ${theme.spacing(4.75)};
 
-	background-image: url(${imgSmallPng});
+	background-image: url(${img.mobile});
 	background-image: image-set(
-		url(${imgSmall2}) 2x,
-		url(${imgSmall}) 1x,
-		url(${imgSmallPng2}) 2x,
-		url(${imgSmallPng}) 1x
+		url(${webp2x.mobile}) 2x,
+		url(${webp.mobile}) 1x,
+		url(${img2x.mobile}) 2x,
+		url(${img.mobile}) 1x
 	);
 	background-repeat: no-repeat;
 	background-position: center bottom 110px;
@@ -46,12 +37,12 @@ export const Container = styled.div`
 		max-width: ${theme.spacing(184)};
 		padding: ${theme.spacing(31)} ${theme.spacing(18)} ${theme.spacing(30.75)};
 
-		background-image: url(${imgMediumPng});
+		background-image: url(${img.tablet});
 		background-image: image-set(
-			url(${imgMedium2}) 2x,
-			url(${imgMedium}) 1x,
-			url(${imgMediumPng2}) 2x,
-			url(${imgMediumPng}) 1x
+			url(${webp2x.tablet}) 2x,
+			url(${webp.tablet}) 1x,
+			url(${img2x.tablet}) 2x,
+			url(${img.tablet}) 1x
 		);
 		background-position: left 45.5% bottom;
 	}
@@ -60,8 +51,13 @@ export const Container = styled.div`
 		max-width: ${theme.spacing(256)};
 		padding: ${theme.spacing(49.25)} 0 ${theme.spacing(51.5)};
 
-		background-image: url(${imgBigPng});
-		background-image: image-set(url(${imgBig2}) 2x, url(${imgBig}) 1x, url(${imgBigPng2}) 2x, url(${imgBigPng}) 1x);
+		background-image: url(${img.desktop});
+		background-image: image-set(
+			url(${webp2x.desktop}) 2x,
+			url(${webp.desktop}) 1x,
+			url(${img2x.desktop}) 2x,
+			url(${img.desktop}) 1x
+		);
 		/* background-position: center bottom; */
 	}
 `;
@@ -111,6 +107,10 @@ export const Subtitle = styled.p`
 	${theme.mediaMin("dt")} {
 		font-size: ${theme.fontSizes.big};
 		line-height: 1.667;
+
+		&:last-of-type {
+			text-indent: 12%;
+		}
 	}
 `;
 

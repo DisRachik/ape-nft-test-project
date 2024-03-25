@@ -7,7 +7,7 @@ export const ContainerWrap = styled.div`
 
 	position: relative;
 
-	max-width: ${theme.breakpoints.mb};
+	max-width: ${theme.breakpoints.sm};
 	margin: 0 auto;
 	padding: 0 ${theme.spacing(18)};
 

@@ -1,10 +1,11 @@
-import { Hero } from "./layout/Hero/Hero";
+import { Hero, About } from "layout";
 
 function App() {
 	return (
 		<>
 			<main>
 				<Hero />
+				<About />
 			</main>
 		</>
 	);

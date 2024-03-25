@@ -19,6 +19,13 @@ export const theme = Object.freeze({
 		big: "24px",
 		giant: "28px",
 
+		bannerTextMb: "36px",
+		bannerTextDt: "64px",
+
+		titleAboutMb: "40px",
+		titleAboutTb: "60px",
+		titleAboutDt: "120px",
+
 		titleSectionMb: "44px",
 		titleSectionTb: "80px",
 		titleSectionDt: "160px",
@@ -37,6 +44,7 @@ export const theme = Object.freeze({
 	spacing: value => `${4 * value}px`,
 
 	breakpoints: {
+		sm: "360px",
 		mb: "480px",
 		tb: "768px",
 		dt: "1280px",
