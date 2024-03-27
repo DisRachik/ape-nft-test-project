@@ -1,8 +1,6 @@
 import styled from "@emotion/styled";
 import { theme } from "styles";
 
-import LogoIcon from "src/icons/logo.svg?react";
-
 export const Header = styled.header`
 	position: absolute;
 	top: ${theme.spacing(13.5)};
@@ -28,34 +26,21 @@ export const Header = styled.header`
 	}
 `;
 
-export const WrapLogo = styled.a`
-	display: inline-block;
-`;
-
-export const Logo = styled(LogoIcon)`
-	display: block;
-	width: 48px;
-	height: 32px;
-	fill: inherit;
-
-	transition: ${props => props.theme.animation("fill")};
-
-	@media (hover: hover) {
-		&:hover {
-			fill: ${theme.colors.lightText};
-		}
-	}
-
-	${theme.mediaMin("dt")} {
-		width: 72px;
-		height: 50px;
-	}
-`;
-
 export const WrapNavMenu = styled.div`
+	overflow: hidden;
+	display: flex;
+
+	border-radius: ${theme.spacing(3)};
+`;
+
+export const Navigation = styled.div`
 	position: absolute;
 	top: ${theme.spacing(2)};
 	right: ${theme.spacing(2)};
+
+	display: flex;
+	flex-direction: column;
+	align-items: end;
 
 	${theme.mediaMin("tb")} {
 		top: ${theme.spacing(3)};
@@ -67,4 +52,3 @@ export const WrapNavMenu = styled.div`
 		right: ${theme.spacing(3.5)};
 	}
 `;
-export const WrapSocialList = styled.div``;

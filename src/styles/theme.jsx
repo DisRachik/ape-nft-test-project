@@ -8,6 +8,7 @@ export const theme = Object.freeze({
 		bgMain: "#181818",
 		bgAccent: "#DC3B5A",
 		bgLinkButton: "rgba(30, 30, 30, 0.10)",
+		bgLinkButtonMB: "rgba(255, 255, 255, 0.10)",
 
 		discord: "#5A65F2",
 	},
@@ -62,7 +63,7 @@ export const theme = Object.freeze({
 
 	animation: value => {
 		const animationValue = value.split(",").map(property => {
-			return `${property.trim()} 0.25s cubic-bezier(0.7, 0.98, 0.86, 0.98)`;
+			return `${property.trim()} 0.5s cubic-bezier(0.7, 0.98, 0.86, 0.98)`;
 		});
 		return animationValue.join(", ");
 	},

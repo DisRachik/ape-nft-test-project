@@ -9,7 +9,7 @@ export const Hero = () => (
 				<s.Title>YACHT APES</s.Title>
 				<s.Subtitle>Apes aRe eveRywhere</s.Subtitle>
 				<s.BottomWrap>
-					<LinkButton href="#" aria="transfer to Mind map section">
+					<LinkButton href="#mint" aria="transfer to Mind map section">
 						MEET APES
 					</LinkButton>
 					<s.Description>Yacht Ape is a collection of unique digital apes that you can own in NFT format</s.Description>

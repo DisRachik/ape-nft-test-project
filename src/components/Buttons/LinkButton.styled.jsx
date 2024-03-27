@@ -1,8 +1,8 @@
 import styled from "@emotion/styled";
 import { theme } from "styles";
 
-const getIconStyle = ({ icon }) => {
-	if (icon) {
+const getIconStyle = ({ isIcon }) => {
+	if (isIcon) {
 		return {
 			width: 24,
 			height: 24,
@@ -10,8 +10,8 @@ const getIconStyle = ({ icon }) => {
 		};
 	}
 };
-const getParentStyle = ({ icon }) => {
-	if (icon) {
+const getParentStyle = ({ isIcon }) => {
+	if (isIcon) {
 		return {
 			display: "grid",
 			placeItems: "center",
@@ -22,8 +22,8 @@ const getParentStyle = ({ icon }) => {
 		};
 	}
 };
-const getParentStyleForDesctop = ({ icon }) => {
-	if (icon) {
+const getParentStyleForDesktop = ({ isIcon }) => {
+	if (isIcon) {
 		return {
 			width: `${theme.spacing(20)}`,
 			height: `${theme.spacing(20)}`,
@@ -39,15 +39,15 @@ export const Link = styled.a`
 	font-weight: 900;
 	line-height: 1.188;
 
-	background-color: ${theme.colors.bgLinkButton};
+	background-color: ${prop => (prop.isMobileMenu ? theme.colors.bgLinkButtonMB : theme.colors.bgLinkButton)};
 	border-radius: ${theme.spacing(3)};
 	backdrop-filter: blur(6px);
 
-	transition: ${props => props.theme.animation("color")};
+	transition: ${theme.animation("color")};
 
 	@media (hover: hover) {
 		&:hover {
-			color: ${theme.colors.lightText};
+			color: ${prop => (prop.isMobileMenu ? theme.colors.accent : theme.colors.lightText)};
 		}
 	}
 
@@ -57,7 +57,7 @@ export const Link = styled.a`
 		font-size: ${theme.fontSizes.giant};
 		line-height: 1.214;
 
-		${getParentStyleForDesctop}
+		${getParentStyleForDesktop}
 	}
 
 	${getParentStyle}

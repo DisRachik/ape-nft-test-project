@@ -4,7 +4,7 @@ import * as s from "./About.styled";
 import { aboutImg } from "src/data/images.js";
 
 export const About = () => (
-	<Section>
+	<Section anchorId="about">
 		<Container>
 			<s.GridWrap>
 				<s.Title>
