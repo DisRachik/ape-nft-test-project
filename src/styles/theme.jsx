@@ -20,6 +20,9 @@ export const theme = Object.freeze({
 		big: "24px",
 		giant: "28px",
 
+		cardTitleMb: "32px",
+		cardTitleDt: "64px",
+
 		bannerTextMb: "36px",
 		bannerTextDt: "64px",
 

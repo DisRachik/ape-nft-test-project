@@ -10,3 +10,5 @@ export * from "./Banner/Banner";
 export * from "./Buttons/LinkButton";
 export * from "./Buttons/NavButton";
 export * from "./CopyRight/CopyRight";
+
+export * from "./cardsForSection/MindMapCard";

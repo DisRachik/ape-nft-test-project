@@ -30,6 +30,8 @@ export const SectionWrap = styled.section`
 `;
 
 export const SectionTitle = styled.h2`
+	margin-bottom: ${theme.spacing(6)};
+
 	font-family: ${theme.fonts.grotesk};
 	font-size: ${theme.fontSizes.titleSectionMb};
 	font-weight: 900;
@@ -39,10 +41,14 @@ export const SectionTitle = styled.h2`
 	text-transform: uppercase;
 
 	${theme.mediaMin("tb")} {
+		margin-bottom: ${theme.spacing(10)};
+
 		font-size: ${theme.fontSizes.titleSectionTb};
 		line-height: 1;
 	}
 	${theme.mediaMin("dt")} {
+		margin-bottom: ${theme.spacing(20)};
+
 		font-size: ${theme.fontSizes.titleSectionDt};
 	}
 `;
