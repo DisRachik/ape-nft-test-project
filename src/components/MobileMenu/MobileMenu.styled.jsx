@@ -6,16 +6,21 @@ export const Backdrop = styled.div`
 	top: 0;
 	left: 0;
 	z-index: 9999;
+
 	width: 100%;
 	height: 100%;
+	padding: ${theme.spacing(18)} ${theme.spacing(4)} ${theme.spacing(20)};
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	gap: ${theme.spacing(5)};
 
 	color: ${theme.colors.lightText};
 	background-color: black;
+`;
 
-	visibility: visible;
-	opacity: 1;
-	pointer-events: auto;
-
-	transition: ${theme.animation("visibility")};
-	transition: ${theme.animation("opacity")};
+export const Wrap = styled.div`
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 `;

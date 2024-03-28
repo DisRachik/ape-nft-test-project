@@ -6,7 +6,7 @@ import * as s from "./Social.styled";
 
 export const Social = ({ isMobileMenu }) => {
 	return (
-		<s.SocialList>
+		<s.SocialList isMobileMenu={isMobileMenu}>
 			{socialList.map(({ id, name, icon, url }) => (
 				<li key={id}>
 					<LinkButton href={url} aria={`Go to ${name} site`} target isIcon isMobileMenu={isMobileMenu}>

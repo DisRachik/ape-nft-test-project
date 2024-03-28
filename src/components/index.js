@@ -9,3 +9,4 @@ export * from "./Picture/Picture";
 export * from "./Banner/Banner";
 export * from "./Buttons/LinkButton";
 export * from "./Buttons/NavButton";
+export * from "./CopyRight/CopyRight";
