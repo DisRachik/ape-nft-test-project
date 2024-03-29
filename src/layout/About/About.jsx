@@ -1,4 +1,4 @@
-import { Section, Container, Picture, Banner } from "components";
+import { Section, Container, PictureEl, Banner } from "components";
 import * as s from "./About.styled";
 
 import { aboutImg } from "src/data/images.js";
@@ -26,7 +26,7 @@ export const About = () => (
 				</s.TextWrap>
 
 				<s.PictureWrap>
-					<Picture image={aboutImg[0]} />
+					<PictureEl image={aboutImg[0]} />
 				</s.PictureWrap>
 			</s.GridWrap>
 		</Container>

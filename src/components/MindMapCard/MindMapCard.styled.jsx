@@ -3,16 +3,21 @@ import { theme } from "styles";
 
 import Icon from "src/icons/vector.svg?react";
 
-export const CardItem = styled.li`
+export const CardItem = styled.div`
+	height: ${theme.spacing(60.5)};
 	padding: ${theme.spacing(6)} ${theme.spacing(3)};
 
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 
-	background-color: ${({ isLink }) => isLink && theme.colors.accent};
+	background-color: ${({ isLink }) => (isLink ? theme.colors.bgAccent : theme.colors.bgDark)};
 	text-transform: uppercase;
 	border-radius: ${theme.spacing(4)};
+
+	${theme.mediaMin("dt")} {
+		height: 100%;
+	}
 `;
 
 export const CardText = styled.p`
@@ -29,7 +34,7 @@ export const CardText = styled.p`
 `;
 
 export const CardLink = styled.a`
-	height: 100%;
+	height: ${theme.spacing(60.5)};
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;

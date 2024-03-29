@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import { theme } from "styles";
 
-export const Picture = ({ image: { img, img2x, webp, webp2x, alt, width, height } }) => (
+export const PictureEl = ({ image: { img, img2x, webp, webp2x, alt, width, height } }) => (
 	<picture>
 		{webp.mobile && (
 			<source
@@ -52,7 +52,7 @@ export const Picture = ({ image: { img, img2x, webp, webp2x, alt, width, height 
 	</picture>
 );
 
-Picture.propTypes = {
+PictureEl.propTypes = {
 	image: PropTypes.shape({
 		img: PropTypes.shape({
 			mobile: PropTypes.string,

@@ -15,6 +15,5 @@ export const ContainerWrap = styled.div`
 
 	${theme.mediaMin("dt")} {
 		max-width: ${theme.breakpoints.dt};
-		padding: 0 ${theme.spacing(51)};
 	}
 `;

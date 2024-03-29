@@ -7,6 +7,7 @@ export const theme = Object.freeze({
 
 		bgMain: "#181818",
 		bgAccent: "#DC3B5A",
+		bgDark: "#1E1E1E",
 		bgLinkButton: "rgba(30, 30, 30, 0.10)",
 		bgLinkButtonMB: "rgba(255, 255, 255, 0.10)",
 

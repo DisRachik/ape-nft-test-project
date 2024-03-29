@@ -12,7 +12,7 @@ export const GridWrap = styled.div`
 	}
 
 	${theme.mediaMin("dt")} {
-		grid-template-columns: ${theme.spacing(135)} ${theme.spacing(123.5)};
+		grid-template-columns: 52.2% 47.6%;
 		grid-template-rows: ${theme.spacing(43.5)} ${theme.spacing(112.5)} ${theme.spacing(47)};
 		gap: ${theme.spacing(6)} ${theme.spacing(0.5)};
 	}
