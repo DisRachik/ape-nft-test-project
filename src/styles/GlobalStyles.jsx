@@ -45,7 +45,8 @@ export const GlobalStyles = css`
 		list-style: none;
 	}
 
-	img {
+	img,
+	picture {
 		display: block;
 		max-width: 100%;
 		height: auto;

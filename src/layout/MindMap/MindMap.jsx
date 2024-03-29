@@ -26,7 +26,7 @@ export const MindMap = () => {
 		<Section anchorId="mind-map" title="MIND map">
 			<Container>
 				{isMobile ? (
-					<Slider data={mindMapList} />
+					<Slider data={mindMapList} section="M-map" />
 				) : (
 					<s.CardList>
 						{mindMapList.map(data => (

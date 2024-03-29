@@ -1,8 +1,9 @@
 import PropTypes from "prop-types";
 import { theme } from "styles";
+import { ImgWrap } from "./PictureEl.styled";
 
-export const PictureEl = ({ image: { img, img2x, webp, webp2x, alt, width, height } }) => (
-	<picture>
+export const PictureEl = ({ image: { img, img2x, webp, webp2x, alt, width, height }, transparent }) => (
+	<ImgWrap transparent={transparent}>
 		{webp.mobile && (
 			<source
 				srcSet={`${webp.mobile} 1x, ${webp2x.mobile} 2x`}
@@ -37,19 +38,19 @@ export const PictureEl = ({ image: { img, img2x, webp, webp2x, alt, width, heigh
 			<source
 				srcSet={`${webp.desktop} 1x, ${webp2x.desktop} 2x`}
 				type="image/webp"
-				media={`(min-width: ${theme.breakpoints.dt})`}
+				media={(img.mobile || img.tablet) && `(min-width: ${theme.breakpoints.dt})`}
 			/>
 		)}
 		{img.desktop && (
 			<source
 				srcSet={`${img.desktop} 1x, ${img2x.desktop} 2x`}
 				type="image/png"
-				media={`(min-width: ${theme.breakpoints.dt})`}
+				media={(img.mobile || img.tablet) && `(min-width: ${theme.breakpoints.dt})`}
 			/>
 		)}
 
 		<img src={img.desktop} alt={alt} width={width} height={height} loading="lazy" />
-	</picture>
+	</ImgWrap>
 );
 
 PictureEl.propTypes = {
@@ -78,4 +79,5 @@ PictureEl.propTypes = {
 		width: PropTypes.number.isRequired,
 		height: PropTypes.number.isRequired,
 	}).isRequired,
+	transparent: PropTypes.bool,
 };

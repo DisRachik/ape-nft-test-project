@@ -26,7 +26,7 @@ export const About = () => (
 				</s.TextWrap>
 
 				<s.PictureWrap>
-					<PictureEl image={aboutImg[0]} />
+					<PictureEl image={aboutImg[0]} transparent />
 				</s.PictureWrap>
 			</s.GridWrap>
 		</Container>
