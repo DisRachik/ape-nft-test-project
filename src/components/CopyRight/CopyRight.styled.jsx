@@ -8,6 +8,10 @@ export const Text = styled.p`
 	text-align: center;
 	text-transform: uppercase;
 
+	${theme.mediaMin("tb")} {
+		max-width: ${theme.spacing(100)};
+	}
+
 	${theme.mediaMin("dt")} {
 		font-size: ${theme.fontSizes.medium};
 		line-height: 1.188;
