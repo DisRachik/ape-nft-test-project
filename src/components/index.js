@@ -9,6 +9,7 @@ export * from "./PictureEl/PictureEl";
 export * from "./Banner/Banner";
 export * from "./Buttons/LinkButton";
 export * from "./Buttons/NavButton";
+export * from "./FaqItem/FaqItem";
 export * from "./CopyRight/CopyRight";
 
 export * from "./Buttons/SliderNavButtons";

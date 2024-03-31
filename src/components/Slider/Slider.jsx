@@ -17,17 +17,15 @@ export const Slider = ({ data, section }) => {
 	};
 
 	return (
-		<>
-			<Swiper spaceBetween={theme.spacing(6)} slidesPerView={1} speed={500} initialSlide={0} breakpoints={breakpoints}>
-				{data.map(itemData => (
-					<SwiperSlide key={itemData.id}>
-						{section === "M-map" && <MindMapCard data={itemData} />}
-						{section === "Arts" && <PictureEl image={itemData} />}
-					</SwiperSlide>
-				))}
-				<SliderNavButtons />
-			</Swiper>
-		</>
+		<Swiper spaceBetween={theme.spacing(6)} slidesPerView={1} speed={500} initialSlide={0} breakpoints={breakpoints}>
+			{data.map(itemData => (
+				<SwiperSlide key={itemData.id}>
+					{section === "M-map" && <MindMapCard data={itemData} />}
+					{section === "Arts" && <PictureEl image={itemData} />}
+				</SwiperSlide>
+			))}
+			<SliderNavButtons />
+		</Swiper>
 	);
 };
 
