@@ -26,8 +26,8 @@ export const faqList = [
 		webp: { desktop: monkey1Webp },
 		webp2x: { desktop: monkey1WebpDpr2 },
 		alt: "1 monkey",
-		width: 284,
-		height: 336,
+		width: 248,
+		height: 282,
 	},
 	{
 		id: "2",
@@ -39,8 +39,8 @@ export const faqList = [
 		webp: { desktop: monkey2Webp },
 		webp2x: { desktop: monkey2WebpDpr2 },
 		alt: "2 monkey",
-		width: 284,
-		height: 336,
+		width: 248,
+		height: 282,
 	},
 	{
 		id: "3",
@@ -51,8 +51,8 @@ export const faqList = [
 		webp: { desktop: monkey3Webp },
 		webp2x: { desktop: monkey3WebpDpr2 },
 		alt: "3 monkey",
-		width: 284,
-		height: 336,
+		width: 248,
+		height: 282,
 	},
 	{
 		id: "4",
@@ -64,7 +64,7 @@ export const faqList = [
 		webp: { desktop: monkey4Webp },
 		webp2x: { desktop: monkey4WebpDpr2 },
 		alt: "4 monkey",
-		width: 284,
-		height: 336,
+		width: 248,
+		height: 282,
 	},
 ];
