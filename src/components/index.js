@@ -15,3 +15,5 @@ export * from "./CopyRight/CopyRight";
 export * from "./Buttons/SliderNavButtons";
 export * from "./Slider/Slider";
 export * from "./MindMapCard/MindMapCard";
+
+export * from "./Form/Form";

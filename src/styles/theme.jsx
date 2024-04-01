@@ -13,6 +13,7 @@ export const theme = Object.freeze({
 		bgLinkButtonMB: "rgba(255, 255, 255, 0.10)",
 
 		discord: "#5A65F2",
+		placeholder: "rgba(255, 255, 255, 0.24)",
 	},
 
 	fontSizes: {

@@ -1,4 +1,4 @@
-import { Hero, About, Header, MindMap, Faq, Arts, Footer } from "layout";
+import { Hero, About, Header, MindMap, Faq, Arts, Mint, Footer } from "layout";
 
 function App() {
 	return (
@@ -10,6 +10,7 @@ function App() {
 				<MindMap />
 				<Faq />
 				<Arts />
+				<Mint />
 			</main>
 			<Footer />
 		</>

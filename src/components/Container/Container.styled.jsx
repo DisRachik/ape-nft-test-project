@@ -3,6 +3,7 @@ import { theme } from "styles";
 
 export const ContainerWrap = styled.div`
 	position: relative;
+	overflow: hidden;
 
 	max-width: ${theme.breakpoints.sm};
 	margin: 0 auto;
