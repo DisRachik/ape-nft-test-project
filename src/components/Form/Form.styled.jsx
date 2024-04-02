@@ -53,7 +53,6 @@ export const Field = styled(FormikField)`
 
 	background-color: inherit;
 	border: 1px solid ${({ error }) => (error ? theme.colors.bgAccent : theme.colors.bgDark)};
-	/* border: 1px solid ${theme.colors.bgDark}; */
 	border-start-end-radius: ${theme.spacing(2)};
 	border-end-end-radius: ${theme.spacing(2)};
 	outline: none;
@@ -111,6 +110,19 @@ export const Button = styled.button`
 	background-color: ${theme.colors.bgAccent};
 	border-radius: ${theme.spacing(2)};
 	backdrop-filter: blur(6px);
+
+	&:disabled {
+		cursor: not-allowed;
+		&:hover {
+			color: currentColor;
+		}
+	}
+
+	@media (hover: hover) {
+		&:hover {
+			color: ${theme.colors.darkText};
+		}
+	}
 
 	${theme.mediaMin("dt")} {
 		padding: ${theme.spacing(4)};

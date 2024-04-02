@@ -16,7 +16,7 @@ export const Btn = styled.button`
 
 	transition: ${theme.animation("color")};
 
-	:disabled {
+	&:disabled {
 		opacity: 0.3;
 		cursor: not-allowed;
 		&:hover {

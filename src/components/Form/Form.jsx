@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import { Formik } from "formik";
 import * as Yup from "yup";
 import toast, { Toaster } from "react-hot-toast";
@@ -19,9 +21,9 @@ const RegisterSchema = Yup.object().shape({
 });
 
 export const Form = () => {
-	const handleSubmit = (values, { resetForm }) => {
+	const [buttonTitle, setButtonTitle] = useState("MINT");
+	const handleSubmit = (_, { resetForm }) => {
 		resetForm();
-		console.log(values);
 		toast.success("We're glad to welcome you!", {
 			style: {
 				borderRadius: "10px",
@@ -29,6 +31,7 @@ export const Form = () => {
 				color: "#fff",
 			},
 		});
+		setButtonTitle("MINTED");
 	};
 
 	return (
@@ -42,39 +45,45 @@ export const Form = () => {
 				validationSchema={RegisterSchema}
 				onSubmit={handleSubmit}
 			>
-				{({ errors, touched, isValid }) => (
-					<s.Form autoComplete="off" noValidate>
-						<s.FormField>
-							<s.IconWrap>
-								<s.DiscordIcon />
-							</s.IconWrap>
-							<s.Field
-								type="text"
-								name="discord"
-								placeholder="@username"
-								required
-								error={errors.discord && touched.discord ? "true" : undefined}
-							/>
-							<s.ErrorMessage name="discord" component="div" />
-						</s.FormField>
+				{({ errors, touched, isValid }) => {
+					!isValid && setButtonTitle("ERROR");
 
-						<s.FormField>
-							<s.IconWrap>
-								<FoxIcon />
-							</s.IconWrap>
-							<s.Field
-								type="text"
-								name="fox"
-								placeholder="Wallet address"
-								required
-								error={errors.fox && touched.fox ? "true" : undefined}
-							/>
-							<s.ErrorMessage name="fox" component="div" />
-						</s.FormField>
+					return (
+						<s.Form autoComplete="off" noValidate>
+							<s.FormField>
+								<s.IconWrap>
+									<s.DiscordIcon />
+								</s.IconWrap>
+								<s.Field
+									type="text"
+									name="discord"
+									placeholder="@username"
+									required
+									error={errors.discord && touched.discord ? "true" : undefined}
+								/>
+								<s.ErrorMessage name="discord" component="div" />
+							</s.FormField>
 
-						<s.Button type="submit">{isValid ? "MINT" : "ERROR"}</s.Button>
-					</s.Form>
-				)}
+							<s.FormField>
+								<s.IconWrap>
+									<FoxIcon />
+								</s.IconWrap>
+								<s.Field
+									type="text"
+									name="fox"
+									placeholder="Wallet address"
+									required
+									error={errors.fox && touched.fox ? "true" : undefined}
+								/>
+								<s.ErrorMessage name="fox" component="div" />
+							</s.FormField>
+
+							<s.Button type="submit" disabled={buttonTitle !== "MINT"}>
+								{buttonTitle}
+							</s.Button>
+						</s.Form>
+					);
+				}}
 			</Formik>
 		</>
 	);
