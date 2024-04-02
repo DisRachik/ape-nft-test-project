@@ -1,8 +1,17 @@
-# React + Vite
+<h1 align="center">Ape-NFT Landing Page</h1>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Technologies Used
 
-Currently, two official plugins are available:
+<div align='center'><img src="./demo/react.svg" width="60" height="60" alt="Html">&nbsp;React&nbsp; <img src="./demo/javascript.svg" width="60" height="60" alt="javaScript">&nbsp;JavaScript&nbsp; <img src="./demo/styled-components.svg" width="60" height="60" alt="Scss">&nbsp;CSS-in-JS&nbsp; <img src="./demo/vite.svg" width="60" height="60" alt="Vite">&nbsp;Vite&nbsp;</div>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Description
+
+Ape NFT offers insights into the ideology behind and principles of the platform. It answers commonly asked questions and presents a collection of NFTs.
+
+## Getting Started
+
+Use this link to open the page: [Ape-NFT](https://disrachik.github.io/ape-nft-test-project/)
+
+<div align='center'>
+<img src='./demo/visit-card.png'/>
+</div>
