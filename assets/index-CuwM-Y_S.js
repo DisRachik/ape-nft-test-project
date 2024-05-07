@@ -157,7 +157,6 @@ Error generating stack: `+s.message+`
 	}
 `,ei=({anchorId:t,title:e,children:n})=>$.jsxs(a3,{id:t,children:[e&&$.jsx(l3,{children:e}),n]});ei.propTypes={anchorId:N.string,title:N.string,children:N.oneOfType([N.arrayOf(N.element),N.element])};const u3=F.div`
 	position: relative;
-	overflow: hidden;
 
 	max-width: ${v.breakpoints.sm};
 	margin: 0 auto;
@@ -482,6 +481,7 @@ Error generating stack: `+s.message+`
 		line-height: 1.666;
 	}
 `,e4=F.div`
+	position: relative;
 	overflow: hidden;
 	max-width: ${v.spacing(42.25)};
 
@@ -527,6 +527,7 @@ Error generating stack: `+s.message+`
 		position: absolute;
 		top: 0;
 		left: 0;
+		z-index: 10;
 
 		width: 148px;
 		height: 183px;
@@ -1283,4 +1284,4 @@ in mind map`,url:"https://www.linkedin.com/in/ihor-radchenko/"}],d9=()=>{const[t
 `,y9=()=>$.jsx(ei,{anchorId:"mint",title:"Are you in?",children:$.jsx(ti,{children:$.jsxs(g9,{children:[$.jsx(Mr,{}),$.jsx(v9,{children:"Join the YACHT APE community to be one of the first to receive our limited edition NFT"}),$.jsx(_k,{})]})})}),w9=F.footer`
 	padding: 0 0 ${v.spacing(13.5)};
 `,_9=()=>$.jsx(w9,{children:$.jsx(ti,{children:$.jsx(Jv,{})})});function x9(){return $.jsxs($.Fragment,{children:[$.jsx(bk,{}),$.jsxs("main",{children:[$.jsx(t9,{}),$.jsx(c9,{}),$.jsx(d9,{}),$.jsx(h9,{}),$.jsx(m9,{}),$.jsx(y9,{})]}),$.jsx(_9,{})]})}tc.createRoot(document.getElementById("root")).render($.jsx(be.StrictMode,{children:$.jsxs(Wx,{theme:v,children:[$.jsx(Gx,{styles:qx}),$.jsx(x9,{})]})}))});export default S9();
-//# sourceMappingURL=index-BErHRLhP.js.map
+//# sourceMappingURL=index-CuwM-Y_S.js.map
