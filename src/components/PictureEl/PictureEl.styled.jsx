@@ -7,7 +7,7 @@ export const ImgWrap = styled.picture`
 	overflow: hidden;
 
 	& > img {
-		background-color: ${({ transparent }) => transparent ?transparent:theme.colors.bgAlternative};
+		background-color: ${({ transparent }) => (transparent ? transparent : theme.colors.bgAlternative)};
 	}
 
 	${theme.mediaMin("dt")} {

@@ -119,6 +119,7 @@ export const ListNumber = styled.span`
 `;
 
 export const Description = styled.div`
+	position: relative;
 	overflow: hidden;
 	max-width: ${theme.spacing(42.25)};
 
@@ -170,6 +171,7 @@ export const ImgWrap = styled.div`
 		position: absolute;
 		top: 0;
 		left: 0;
+		z-index: 10;
 
 		width: 148px;
 		height: 183px;
